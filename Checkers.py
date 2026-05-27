@@ -62,7 +62,7 @@ class Game:
         pyxel.init(160, 160, title="CHECKERS", fps=30)
         try:
             pyxel.load("res.pyxres")
-        except FileNotFoundError:
+        except Exception:
             print("Avertissement : fichier res.pyxres introuvable.")
 
         pyxel.run(self.update, self.draw)
